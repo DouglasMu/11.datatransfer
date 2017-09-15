@@ -21,16 +21,16 @@ public class AnotherActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=getIntent();
                 String str=intent.getStringExtra("String");
-                Integer in=intent.getIntExtra("int", 20);
-                intent.putExtra("result","String:"+str+" int:"+in);
+               // Integer in=intent.getIntExtra("int", 20);
+                intent.putExtra("result","String:"+str);
                 setResult(0,intent);
                 finish();
             }
         });
         Intent intent = getIntent();
         String str = intent.getStringExtra("String");
-        Integer in = intent.getIntExtra("int", 20);
-        Toast.makeText(this, str + in, Toast.LENGTH_LONG).show();
+        //Integer in = intent.getIntExtra("int", 20);
+        Toast.makeText(this, str , Toast.LENGTH_SHORT).show();
 
     }
 }

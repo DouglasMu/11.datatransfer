@@ -7,8 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
-import com.example.a11datatransfer.R;
 public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,AnotherActivity.class);
-                intent.putExtra("String","穆天杨");
-                intent.putExtra("int",20);
+                EditText editText = (EditText) findViewById(R.id.edit1);
+                String str = editText.getText().toString();
+                intent.putExtra("String",str);
+                //intent.putExtra("int",20);
                 startActivityForResult(intent,0);
             }
         });
