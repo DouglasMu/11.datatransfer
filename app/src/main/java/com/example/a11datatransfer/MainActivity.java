@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,AnotherActivity.class);
-                EditText editText = (EditText) findViewById(R.id.edit1);
+                EditText editText = (EditText) findViewById(R.id.edit1);//获取输入信息
                 String str = editText.getText().toString();
                 intent.putExtra("String",str);
                 //intent.putExtra("int",20);
